@@ -1,0 +1,42 @@
+<h1>about</h1>
+
+<ul class="unstyled">
+	<li>return total todos in progress</li>
+	<li ng-repeat="todo in todos">
+		<div class="todo">
+			<input type="checkbox" ng-model="todo.done" ng-click="handleTodoCheck()">
+			<span class="done-{{todo.done}}">
+				<span>{{todo.todoItem}}</span>
+				<span>{{todo.description}}</span>
+			</span>
+		</div></li>
+
+		<li ng-repeat="newTodo in newTodos">
+		<div class="newTodo">
+			<input type="checkbox" ng-model="newTodo.done" ng-click="handleTodoCheck()">
+			<span class="done-{{NewTodo.done}}">
+				<span>{{newTodo.todoItem}}</span>
+				<span>{{newTodo.description}}</span>
+			</span>
+		</div></li>
+
+</ul>
+	<div class="input panel">
+		<select name="orders" ng-model="orders" ng-model-instant>
+		<div>
+			<option value="new" ng-click="addNew()">NEW</option>
+			<option ng-repeat="todo in todos" value="{{todo.id}}" >{{todo.id}}</option> 
+		</div>
+		</select>
+		<input type="text" ng-model="newTodoName" ng-model-instant>
+		<input type="text" ng-model="newTodoDescription" ng-model-instant>
+		<button ng-click="addNewTodo()">
+			<i class="icon-plus"></i>
+			add one	</button>
+	</div>
+	<div class="button-panel">
+		<button ng-click="clearFinishedTodos()">ClearFinished Todos</button>
+		<button ng-click="saveTodos()">Save Todos</button>
+		<button ng-click="saveDBTodos()">Save Todos to DB</button>
+	</div>
+	<contact-card></contact-card>

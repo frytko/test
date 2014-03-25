@@ -1,0 +1,23 @@
+body {
+	background-color: yellow;
+}
+#nav li{
+	display:inline;
+	list-style-type: none;
+	background-color: gray;
+	padding-right: '50px';
+}
+.button-panel {
+/*	text-decoration: line-through;*/
+	background-color: "grey";
+}
+.deleted-true {
+	background-color: #d34;
+}
+.unstyled {
+	list-style-type: none;
+}
+.todo {
+/*	background-color: red; */
+	background-color: #f44;
+}
